@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>苗哥的衣橱·演员谢苗超话</title>
+    <title>奇迹苗哥·演员谢苗超话</title>
     <style>
         :root {
             /* ===== 高阶轻奢手帐色系 ===== */
@@ -559,9 +559,9 @@
             <img src="images/avatar-logo.png" alt="" onerror="handleLogoFallback(this)">
         </div>
         <div class="intro-kicker">演员谢苗超话</div>
-        <div class="intro-title-1">苗哥的衣橱</div>
+        <div class="intro-title-1">奇迹苗哥</div>
         <div class="intro-rule"></div>
-        <button class="intro-enter-btn" id="enter-game-btn">进入衣橱</button>
+        <button class="intro-enter-btn" id="enter-game-btn">进入游戏</button>
         <div class="intro-credit">制作 林科森 · 制图 左海</div>
     </div>
 </div>
@@ -573,7 +573,7 @@
                 <img src="images/avatar-logo.png" alt="" onerror="handleLogoFallback(this)">
             </div>
             <div class="title-group">
-                <h1>苗哥的衣橱</h1>
+                <h1>奇迹苗哥</h1>
                 <div class="subtitle">演员谢苗超话</div>
             </div>
         </div>
@@ -606,8 +606,8 @@
 
     <div id="wardrobe-wrapper">
         <div class="seg" id="mode-seg">
-            <button class="seg-btn on" id="btn-mode-scatter" onclick="switchMainMode('scatter')">散件搭配</button>
-            <button class="seg-btn" id="btn-mode-archive" onclick="switchMainMode('archive')">私服存档</button>
+            <button class="seg-btn on" id="btn-mode-scatter" onclick="switchMainMode('scatter')">OOTD</button>
+            <button class="seg-btn" id="btn-mode-archive" onclick="switchMainMode('archive')">存档</button>
         </div>
 
         <!-- 纯文字胶囊导航栏（保持原有纯文字，未添加图标） -->
@@ -625,13 +625,13 @@
 </div>
 
 <div id="poster-mask">
-    <img id="final-photo-img" alt="苗哥的衣橱写真" src="" />
+    <img id="final-photo-img" alt="苗哥写真" src="" />
     <div class="user-id-wrapper">
         <span>署名</span>
         <input type="text" id="nickname-input" class="user-id-input" maxlength="8" value="林科森" placeholder="输入ID" />
         <button class="btn-confirm-id" onclick="updatePhotoWithID()">确认</button>
     </div>
-    <button class="btn-close-poster" onclick="closePoster()">返回衣橱</button>
+    <button class="btn-close-poster" onclick="closePoster()">返回游戏</button>
     <div class="poster-hint">长按相纸保存</div>
 </div>
 
@@ -706,14 +706,14 @@
     }
 
     const WARDROBE_PARTS = {
-        body: generateParts('body', 'body_base', 4, false),
-        face: generateParts('face', 'face', 6, false),
-        maker: generateParts('maker', 'maker', 5, true),
-        hair: generateParts('hair', 'hair', 8, true),
-        top: generateParts('top', 'top', 8, true),
-        pants: generateParts('pants', 'pants', 6, true),
-        shoes: generateParts('shoes', 'shoes', 7, true),
-        headwear: generateParts('headwear', 'headwear', 5, true),
+        body: generateParts('body', 'body_base', 3, false),
+        face: generateParts('face', 'face', 5, false),
+        maker: generateParts('maker', 'maker', 4, true),
+        hair: generateParts('hair', 'hair', 7, true),
+        top: generateParts('top', 'top', 7, true),
+        pants: generateParts('pants', 'pants', 5, true),
+        shoes: generateParts('shoes', 'shoes', 6, true),
+        headwear: generateParts('headwear', 'headwear', 4, true),
         accessory: generateParts('accessory', 'acc', 10, true)
     };
 
@@ -788,7 +788,7 @@
         mask.style.opacity = '0';
         mask.style.transform = 'scale(1.04)';
         setTimeout(() => { mask.style.display = 'none'; }, 480);
-        showToast('欢迎来到苗哥的衣橱');
+        showToast('一起装扮苗哥吧');
     }
 
     function initStageCanvas() {
@@ -1244,7 +1244,7 @@
         ctx.font = '900 28px -apple-system, sans-serif';
         ctx.fillStyle = '#E25E1B';
         ctx.textAlign = 'center';
-        ctx.fillText('苗哥的衣橱', S / 2, 102);
+        ctx.fillText('奇迹苗哥', S / 2, 102);
         ctx.restore();
 
         const frameSize = 430;
